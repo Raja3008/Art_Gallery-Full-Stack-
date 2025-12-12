@@ -1,0 +1,169 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+
+:root {
+	--blue: #0071FF;
+	--light-blue: #B6DBF6;
+	--dark-blue: #005DD1;
+	--grey: #f2f2f2;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-image: url("https://i.imgur.com/kW0lPnc.jpeg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+}
+
+
+.container {
+	max-width: 500px; /* Increased width */
+	width: 100%;
+	background-color:rgba(255, 255, 255, 0.8);
+	padding: 30px; /* Increased padding */
+	border-radius: 30px;
+	margin-right: 30px;
+	display:flex;
+}
+
+.c_in
+{
+	width: 350px;
+	background-color: white;
+	height: 50px;
+	border:none;
+	outline: none;
+	padding-left:25px;
+	font-weight:500;
+	color:#140101;
+	border-radius:50px;
+}
+.contact_left h2
+{
+font-weight:600;
+color: black;
+font-size:40px;
+margin-bottom:5px;
+}
+
+.form-area textarea
+{
+height:140px;
+padding-top:15px;
+border-radius:20px;
+}
+.c_in:focus{
+border:2px solid #ff994f;
+}
+.form-area button{
+	display: flex;
+	align-items: center;
+	padding: 15px 30px;
+    font-size: 16px;
+	color: #fff;
+	gap: 10px;
+	border: none;
+	border-radius: 50px;
+	background: linear-gradient(270deg,#584fff,#151ca0);
+	cursor: pointer;
+	text-align: center;
+
+}
+.form-area
+{
+	display:flex;
+	flex-direction:column;
+	align-items:start;
+	gap:30px;
+	font-size: larger;
+	font-weight: 600;
+}
+.img-area {
+	position: relative;
+	
+	height: 400px;
+	background-color:rgba(255, 255, 255, 0.8);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	display:flex;
+	width: 400px; 
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.img-area p {
+	color: #999;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+.select-image {
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 15px;
+	background: var(--blue);
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-image:hover {
+	background: var(--dark-blue);
+}

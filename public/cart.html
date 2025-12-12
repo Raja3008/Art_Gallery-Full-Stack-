@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+
+    <link rel="stylesheet" href="fs.css"> 
+    <style> 
+.navbar .cart {
+    height: 30px;
+    width: 30px;
+    background: yellow;
+    border-radius: 50%;
+    color: #111;
+    text-align: center;
+    line-height: 30px;
+}
+
+.cart_page {
+    padding: 20px 50px;
+}
+
+.cart_item {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    padding: 20px;
+    background-color: #EAD196;
+    border-radius: 12px; /* Make the border curved */
+    transition: box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.cart_item:hover {
+    box-shadow: rgba(1, 1, 0.7,0.7) 0px 3px 6px; /* Light shadow on hover */
+}
+
+
+.cart_item .buttons {
+    display: flex;
+}
+
+.cart_item .buttons .quantity {
+    padding: 0 20px;
+    border: 1px solid #020000;
+    height: 100px;
+    margin-top: 15px;
+    line-height: 50px;
+    font-size: 32px;
+}
+
+.cart_item .buttons .quantity {
+    padding: 0 20px;
+    border: 1px solid #111;
+    height: 50px;
+    margin-top: 15px;
+    line-height: 50px;
+    font-size: 32px;
+}
+
+.cart_item .buttons button {
+    position: relative; /* Add position relative */
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    background: black;
+    font-size: 30px;
+    color: yellow;
+    margin: 10px;
+    transition: .4s ease-in;
+    cursor: pointer;
+}
+
+.cart_item .buttons button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: px solid white; /* White border */
+    z-index: -1; /* Ensure the pseudo-element is behind the button */
+}
+
+.cart_item .buttons button:hover::before {
+    border-color: #111; /* Change border color on hover */
+}
+
+
+.cart_item .buttons button:hover {
+    background: transparent;
+    border: 1px solid;
+    color: #111;
+}
+
+.cart_item .rmv_btn {
+    padding: 15px 20px;
+    font-size: 20px;
+    background:#000;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s ease-in;
+    border-radius: 12px; /* Add curved border */
+}
+
+.cart_item .rmv_btn:hover {
+    border: 1px solid #111;
+    color: #000;
+    background: transparent;
+}
+
+
+/* checkout_area */
+
+.checkout_area {
+    text-align: center;
+}
+
+.checkout_area button {
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 120px;
+    margin: 20px auto;
+    font-size: 18px;
+    background-color: #111;
+    color: #fff;
+    transition: .5s ease-in;
+    border: none;
+    border-radius: 25px; /* Add curved border */
+}
+
+.checkout_area button:hover {
+    border: 1px solid #111;
+    color: #000;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
+}
+
+</style>
+    
+</head>
+<body>
+    
+<section id="header">
+    <div class="left">
+        <a href="#"><img src="https://i.imgur.com/KNuWbjE.jpg" class="logo" alt="Logo"></a>
+    </div>
+    <div class="right">
+        <ul id="navbar">
+            <li><a href="fs.html">Home</a></li>
+            <li><a href="fs.html">Shop</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-bag"></i><div id="cartAmount" class="cartAmount">0</div></a></li>
+        </ul>
+    </div>
+</section>
+
+<div id="cart-item">
+    <!-- Display the cart items here -->
+</div>
+<div class="cart_page">
+    <div class="shopping-cart" id="shopping-cart">
+        <div class="label" id="label"></div>
+    </div>
+</div>
+
+<footer class="section-p1">
+    <div class="col install">
+       <!--
+        <img src="">
+       --> 
+        <h4>Contact</h4><br>
+        <p><strong>Address: </strong>Baswangudi, BMS College Of Engineering</p>
+        <p><strong>Phone: </strong>+01 2222 655 / (+91)01 2345 6789</p>
+        <p><strong>Hours: </strong>10:00 - 18:00. Mon - Sat</p>
+        
+        <div class="follow">
+            <h4>Follow Us On</h4>
+            <div class=" icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4><br><br>
+        <a href="#">About Us</a><br><br>
+        <a href="#">Delivery Information</a><br><br>
+        <a href="#">Privacy Policy</a><br><br>
+        <a href="#">Terms & Conditions</a><br><br>
+        <a href="#">Contact Us</a><br><br>
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4><br><br>
+        <a href="#">Sign In</a><br><br>
+        <a href="#">View Cart</a><br><br>
+        <a href="#">My Wishlist</a><br><br>
+        <a href="#">Track My Order</a><br><br>
+        <a href="#">Help</a><br><br>
+    </div>
+
+    <div class="col">
+        <h4>Install App</h4><br>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="https://i.imgur.com/hRXu4ng.png" width="100px" height="30px">
+            <img src="https://i.imgur.com/5yLbfXT.png"width="100px" height="30px" ><br><br>
+        </div>
+        <p>Secured Payments Gateways</p>
+        <img src="https://i.imgur.com/j31tiMN.png" width="100%" height="25px">
+    </div>
+
+   
+    
+</footer>
+
+<section id="last">
+    <div class="copyright">
+        <p >© 2024 www.artgallery.com. All rights reserved.</p>
+    </div>
+</section>
+<script src="data.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

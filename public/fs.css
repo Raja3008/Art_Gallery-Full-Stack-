@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    width:100%;
+}
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    background: white;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+#navbar{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 25px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    /* for smooth changing*/
+    transition: 0.3s ease;
+}
+#navbar li a:hover{
+    color:#088178;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178; /* Home link will be highlighted*/
+
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height:2px;
+    background:#088178;
+    position: absolute;
+    bottom: -4px;
+    left: 25px;
+}
+.cartAmount {
+    position: absolute;
+    top: -15px; /* Adjust the top position to move it down */
+    right: 13px; /* Adjust the right position to move it left */
+    font-size: 12px;
+    background-color:#088178;
+    color: white;
+    padding: 3px;
+    border-radius: 50%;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppings',sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:#1c1c1a;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color:black;
+}
+h4{
+    font-size: 20px;
+    color:black;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color:#465b52;
+    margin:15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+#hero{
+    background-image:url("https://i.imgur.com/TXJx8rt.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 250px 60px 0px 100px;
+}
+.box{
+    position: relative;
+    max-width: 400px;
+    margin: 15px 0px 0px;
+    padding:10px;
+    background:rgb(243, 237, 200, 0.7);
+}
+#hero button{
+        background-color: #EAD196;
+        border: none;
+        color: black;
+        font-weight: 900;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+      
+}
+/* For making all feature box in one line */
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #EAD196;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 74px rgba(0,0,0,0.1);
+}
+/* making our image responsive*/
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .fe-box h6{
+    padding: 9px 8px 6px 8px ;
+    line-height: 1;
+    border-radius: 8px;
+    color: black;
+    background-color: #EAD196;
+    margin-top: 10px;
+}
+#product1{
+    text-align: center;
+}
+#product1 .shop_item{
+    
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #EAD196;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 35px 0;
+    transition: 0.3s ease;
+    padding: 15px 15px;
+    position: relative;
+    
+}
+#product1 .shop_item .product_info{
+    text-align: start;
+    padding: 15px 0px;
+}
+#product1 .shop_item .product_info span{
+    color:#5e5d5a;
+    font-size: 15px;
+}
+#product1 .shop_item .product_info h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .shop_item .product_info .star{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+#product1 .shop_item .product_info .cart1 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #088178;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer;
+    border: 1px solid transparent ; /* Set border color to transparent */
+}
+#product1 .shop_item .product_info h4{
+    
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+#product1 .shop_item:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+#product1 .shop_item img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .shop1    {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#newstext{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(125, 10, 10);
+    flex-direction: column; 
+    
+    height: 30vh;
+    width: 100%;
+    
+}
+#newstext h4{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+} 
+#newstext p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newstext p span{
+
+    color: #ffbd27;
+}
+
+#newstext .form{
+    display: flex;
+    width: 40%;
+}
+
+
+#newstext input{
+    height: 3.125rem;
+    padding: 0 1.25em ;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+}
+#newstext button{
+    background-color: #EAD196;
+        border: none;
+        color: black;
+        font-weight: 900;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        white-space: nowrap;
+}
+
+
+footer {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+footer .col{
+    width:23%;
+min-width: 250px;
+padding: 10px 12px;
+margin: 35px 0;
+
+padding: 15px 15px;
+
+}
+section .copyright{
+    text-align: center;
+}
+
+footer a{
+    font-size: 16px;
+    text-decoration: none;
+    color:#222;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover{
+    color:#088178;
+}
+
+/* Rajashekhar's Codes*/
+
+#categories {
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#shop:hover #categories {
+    display: block;
+}
+
+#categories li {
+    background-color:rgb(243, 237, 200, 0.7);
+    border-bottom: 1px solid #ddd;
+}
+
+#categories li a {
+    display: block;
+    padding: 10px;
+    color:black;
+    width: 160px;
+}
+
+/* About Codes*/
+#product1{
+    text-align: center;
+}
+#product1 .pro{
+    
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #EAD196;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 35px 0;
+    transition: 0.3s ease;
+    padding: 15px 15px;
+    position: relative;
+    
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 15px 0px;
+}
+#product1 .pro .des span{
+    color:#5e5d5a;
+    font-size: 15px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des .star{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+#product1 .pro .des .cart1 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius:50px;
+        color: #088178;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+         
+}
+
+#product1 .pro .des h4{
+    
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
